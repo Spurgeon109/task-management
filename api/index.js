@@ -9,7 +9,7 @@ const port = 3000
 
 function getMongoClient(){
     const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
-    const password = 'Sam109'
+    const password = '' // get the passoword from env variable
     const uri = `mongodb+srv://Sam109:${password}@mongo101.8im1r2y.mongodb.net/?appName=Mongo101`;
     const client = new MongoClient(uri, {
         serverApi: {
