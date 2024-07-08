@@ -1,0 +1,27 @@
+<div class="menu">
+    <div class="menu__action">
+        <mat-form-field appearance="outline">
+            <mat-label>Title</mat-label>
+            <input type="text" matInput [(ngModel)]="titleFilter" (input)="applyFilter()">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Status</mat-label>
+            <mat-select [(ngModel)]="statusFilter" (selectionChange)="applyFilter()">
+                <mat-option *ngFor="let status of ['To Do', 'In Progress', 'Done']"
+                    [value]="status">{{status}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <button mat-raised-button class="menu__action--btn" (click)="addNewTask()">
+            <mat-icon>add</mat-icon>&nbsp;Add Task
+        </button>
+    </div>
+    <div class="task-container">
+        <div *ngFor="let item of filteredList" class="task-container__item">
+            <span class="title">{{item.title}}</span>
+            <div class="action">
+                <button mat-icon-button class="action--btn" (click)="editTask(item)"><mat-icon>edit</mat-icon></button>
+                <button mat-icon-button class="action--btn" (click)="deleteTask(item)"><mat-icon>delete</mat-icon></button>
+            </div>
+        </div>
+    </div>
+</div>

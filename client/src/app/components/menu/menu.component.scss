@@ -1,0 +1,48 @@
+.menu{
+    margin: 1rem;
+    &__action{
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        .mat-mdc-form-field{
+            transform: scale(0.8);
+        }
+        &--btn{
+            background-color: var(--primary-color) !important;
+            color: white !important;  
+        }
+    }
+    .task-container{
+        margin: 1rem 0 0 0;
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        gap: 1rem;
+        &__item{
+            border-left: 4px solid var(--primary-color);
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            box-shadow :0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+            background-color: white;
+            cursor: pointer;
+            .title{
+            }
+            .action{
+                &--btn{
+                    color: var(--primary-color);
+                    &:hover{
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}

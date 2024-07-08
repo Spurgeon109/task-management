@@ -1,0 +1,9 @@
+
+<ng-container *ngIf="_loaderService.loaderStatus | async">
+  <div class="load-container">
+    <p class="status-text">{{ _loaderService.loaderText$ | async }}</p>
+    <div class="loading-wrapper">
+      <div class="loader"></div>
+    </div>
+  </div>
+</ng-container>
